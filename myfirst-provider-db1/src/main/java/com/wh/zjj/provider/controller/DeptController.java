@@ -2,6 +2,7 @@ package com.wh.zjj.provider.controller;
 
 import com.wh.zjj.common.base.entity.Dept;
 import com.wh.zjj.common.base.service.IDeptService;
+import com.wh.zjj.common.utils.UUIDUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -40,7 +41,16 @@ public class DeptController {
 
     @GetMapping(value = "/dept/list")
     public List<Dept> list() {
-        return deptService.list();
+        try {
+            UUIDUtil.insertTid();
+            log.info("查询所有");
+            return deptService.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            UUIDUtil.removeTid();
+        }
+        return null;
     }
 
     /**
@@ -52,7 +62,7 @@ public class DeptController {
         List<String> list = client.getServices();
         log.info("**********" + list);
 
-        List<ServiceInstance> srvList = client.getInstances("MICROSERVICECLOUD-DEPT");
+        List<ServiceInstance> srvList = client.getInstances("MYFIRST-PROVIDER-DEPT");
         for (ServiceInstance element : srvList) {
             log.info(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t"
                     + element.getUri());

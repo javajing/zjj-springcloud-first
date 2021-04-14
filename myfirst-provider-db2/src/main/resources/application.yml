@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: provider-db2
+    name: myfirst-provider-dept
   profiles:
     active: ${deploy.type}
     include: common

@@ -52,7 +52,7 @@ public class DeptController {
         List<String> list = client.getServices();
         log.info("**********" + list);
 
-        List<ServiceInstance> srvList = client.getInstances("MICROSERVICECLOUD-DEPT");
+        List<ServiceInstance> srvList = client.getInstances("MYFIRST-PROVIDER-DEPT");
         for (ServiceInstance element : srvList) {
             log.info(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t"
                     + element.getUri());
