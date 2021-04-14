@@ -18,6 +18,7 @@
         <module>myfirst-provider-db2</module>
         <module>myfirst-provider-db3</module>
         <module>myfirst-provider-hystrix</module>
+        <module>myfirst-client-ribbon</module>
     </modules>
 
     <properties>

@@ -1,0 +1,15 @@
+server: 
+  port: 9001
+
+spring:
+  profiles:
+    active: ${deploy.type}
+
+logging:
+  config: classpath:logback-spring.xml
+
+eureka:
+  client:
+    register-with-eureka: false  # 当前微服务不注册到eureka中(消费端)
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
