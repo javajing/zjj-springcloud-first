@@ -1,6 +1,7 @@
 package com.wh.zjj.api.service;
 
 import com.wh.zjj.api.dto.param.DeptParam;
+import com.wh.zjj.api.dto.result.DeptDto;
 import com.wh.zjj.api.factory.DeptClientServiceFallbackFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,17 +16,17 @@ import java.util.List;
  */
 // value --->指定调用哪个服务
 // fallbackFactory--->熔断器的降级提示
-@FeignClient(value = "SPRINGCLOUD-FIRST-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
+@FeignClient(value = "MYFIRST-PROVIDER-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     /**
      * 采用Feign我们就可以使用SpringMVC的注解来对提供者的服务进行绑定！
      */
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
-    public DeptParam get(@PathVariable("id") long id);
+    public DeptDto get(@PathVariable("id") long id);
 
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
-    public List<DeptParam> list();
+    public List<DeptDto> list();
 
     @RequestMapping(value = "/dept/add", method = RequestMethod.POST)
     public boolean add(DeptParam dept);

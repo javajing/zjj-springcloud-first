@@ -19,6 +19,7 @@
         <module>myfirst-provider-db3</module>
         <module>myfirst-provider-hystrix</module>
         <module>myfirst-client-ribbon</module>
+        <module>myfirst-client-feign</module>
     </modules>
 
     <properties>

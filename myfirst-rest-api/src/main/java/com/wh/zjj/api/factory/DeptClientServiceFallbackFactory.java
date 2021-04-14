@@ -1,6 +1,7 @@
 package com.wh.zjj.api.factory;
 
 import com.wh.zjj.api.dto.param.DeptParam;
+import com.wh.zjj.api.dto.result.DeptDto;
 import com.wh.zjj.api.service.DeptClientService;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
@@ -17,13 +18,13 @@ public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptCli
     public DeptClientService create(Throwable throwable) {
         return new DeptClientService() {
             @Override
-            public DeptParam get(long id) {
-                return new DeptParam().setDeptno(id).setDname("该ID：" + id + "没有找到,降级处理")
+            public DeptDto get(long id) {
+                return new DeptDto().setDeptno(id).setDname("该ID：" + id + "没有找到,降级处理")
                         .setDbSource("error");
             }
 
             @Override
-            public List<DeptParam> list() {
+            public List<DeptDto> list() {
                 return null;
             }
 
