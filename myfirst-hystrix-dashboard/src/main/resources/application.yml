@@ -1,0 +1,9 @@
+server: 
+  port: 9003
+
+spring:
+  profiles:
+    active: ${deploy.type}
+
+logging:
+  config: classpath:logback-spring.xml
