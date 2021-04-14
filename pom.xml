@@ -12,6 +12,7 @@
         <module>myfirst-eureka-node1</module>
         <module>myfirst-eureka-node2</module>
         <module>myfirst-eureka-node3</module>
+        <module>myfirst-rest-api</module>
     </modules>
 
     <properties>
