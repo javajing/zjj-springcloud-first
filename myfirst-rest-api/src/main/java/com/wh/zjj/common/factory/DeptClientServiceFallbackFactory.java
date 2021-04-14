@@ -1,7 +1,7 @@
-package com.wh.zjj.api.factory;
+package com.wh.zjj.common.factory;
 
-import com.wh.zjj.api.dto.param.Dept;
-import com.wh.zjj.api.service.DeptClientService;
+import com.wh.zjj.common.dao.mapper.Dept;
+import com.wh.zjj.common.service.DeptClientService;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 import java.util.List;

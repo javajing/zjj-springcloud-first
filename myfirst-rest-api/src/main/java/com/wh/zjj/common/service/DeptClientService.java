@@ -1,7 +1,7 @@
-package com.wh.zjj.api.service;
+package com.wh.zjj.common.service;
 
-import com.wh.zjj.api.dto.param.Dept;
-import com.wh.zjj.api.factory.DeptClientServiceFallbackFactory;
+import com.wh.zjj.common.dao.mapper.Dept;
+import com.wh.zjj.common.factory.DeptClientServiceFallbackFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

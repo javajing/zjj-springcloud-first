@@ -1,4 +1,4 @@
-package com.wh.zjj.api.exception;
+package com.wh.zjj.common.dto;
 
 /**
  * @author zjj

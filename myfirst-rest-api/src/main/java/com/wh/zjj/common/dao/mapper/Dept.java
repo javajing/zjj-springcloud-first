@@ -1,4 +1,4 @@
-package com.wh.zjj.api.dto.param;
+package com.wh.zjj.common.dao.mapper;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
