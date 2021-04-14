@@ -4,3 +4,5 @@
 *.iml
 *.puml
 rebel.xml
+/myfirst-eureka-node1/target/
+/myfirst-eureka-node2/target
