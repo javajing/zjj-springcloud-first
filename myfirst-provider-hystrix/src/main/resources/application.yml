@@ -1,0 +1,26 @@
+server: 
+  port: 8004
+
+spring:
+  application:
+    name: myfirst-provider-dept
+  profiles:
+    active: ${deploy.type}
+    include: common
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudDB01?characterEncoding=UTF-8&useSSL=false&connectTimeout=2000&socketTimeout=10000
+    username: root
+    password: root
+
+logging:
+  config: classpath:logback-spring.xml
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      # 将该service注册到集群eureka中
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: provider-hystrix   # 在eureka中显示对应的服务名字
+    prefer-ip-address: true     #在eureka中下边的访问路径可以显示IP地址

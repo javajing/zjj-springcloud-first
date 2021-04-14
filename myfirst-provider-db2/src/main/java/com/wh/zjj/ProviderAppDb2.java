@@ -19,12 +19,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @desc (服务提供者db2)
  */
 @SpringBootApplication
-@EnableEurekaClient //本服务启动后会自动注册进eureka服务中
-@EnableDiscoveryClient //服务发现
 @EnableConfigurationProperties
 @MapperScan({"com.wh.zjj.common.*.mapper"})
 @EnableTransactionManagement
 @EnableAsync
+
+@EnableEurekaClient //本服务启动后会自动注册进eureka服务中
+@EnableDiscoveryClient //服务发现
 public class ProviderAppDb2 extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

@@ -26,7 +26,7 @@ public class Dept extends Model<Dept> {
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "deptno", type = IdType.AUTO)
-    private Integer deptno;
+    private Long deptno;
 
     private String dname;
 

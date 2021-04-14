@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -26,10 +27,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableEurekaClient //本服务启动后会自动注册进eureka服务中
 @EnableDiscoveryClient //服务发现
-public class ProviderAppDb3 extends SpringBootServletInitializer {
+@EnableCircuitBreaker//对hystrixR熔断机制的支持
+public class ProviderAppHystrix extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(ProviderAppDb3.class);
+        SpringApplication application = new SpringApplication(ProviderAppHystrix.class);
         application.setBannerMode(Banner.Mode.OFF);
         application.run(args);
     }
@@ -39,7 +41,7 @@ public class ProviderAppDb3 extends SpringBootServletInitializer {
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(ProviderAppDb3.class);
+        return builder.sources(ProviderAppHystrix.class);
     }
 
 }
