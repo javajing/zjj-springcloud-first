@@ -14,6 +14,7 @@
         <module>myfirst-eureka-node3</module>
         <module>myfirst-rest-api</module>
         <module>myfirst-common</module>
+        <module>myfirst-provider-db1</module>
     </modules>
 
     <properties>
