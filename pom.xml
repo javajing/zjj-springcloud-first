@@ -10,6 +10,7 @@
 
     <modules>
         <module>myfirst-eureka-node1</module>
+        <module>myfirst-eureka-node2</module>
     </modules>
 
     <properties>
