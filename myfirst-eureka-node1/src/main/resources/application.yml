@@ -7,6 +7,9 @@ spring:
   profiles:
     active: ${deploy.type}
 
+logging:
+  config: classpath:logback-spring.xml
+
 eureka: 
   instance:
     hostname: eureka7001.com #eureka服务端的实例名称(这里使用了虚拟主机映射，修改hosts文件即可实现)
