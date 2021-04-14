@@ -42,5 +42,5 @@ mybatis-plus:
 info: # 在eureka中可以点击info链接，显示有值。链接后的内容就是在这里配置的
   app.name: springcloud-first
   company.name: zjj
-  build.artifactId: springcloud-first-artifact
+  build.artifactId: ${artifactId}
   build.version: 0.0.1-SNAPSHOT
