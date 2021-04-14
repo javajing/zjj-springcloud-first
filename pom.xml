@@ -5,11 +5,12 @@
     <groupId>com.wh.zjj</groupId>
     <artifactId>springcloud-first</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>zjj的第一代spring cloud组件使用demo</description>
+
     <modules>
         <module>myfirst-eureka-node1</module>
     </modules>
-    <packaging>pom</packaging>
-    <description>zjj的第一代spring cloud组件使用demo</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

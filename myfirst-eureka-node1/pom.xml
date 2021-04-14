@@ -54,7 +54,7 @@
             <id>dev</id>
             <properties>
                 <deploy.type>dev</deploy.type>
-                <log.level>debug</log.level>
+                <log.level>info</log.level>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
