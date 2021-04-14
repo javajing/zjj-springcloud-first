@@ -21,6 +21,7 @@
         <module>myfirst-client-ribbon</module>
         <module>myfirst-client-feign</module>
         <module>myfirst-hystrix-dashboard</module>
+        <module>myfirst-zuul</module>
     </modules>
 
     <properties>

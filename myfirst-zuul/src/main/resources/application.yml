@@ -1,0 +1,28 @@
+server: 
+  port: 6001
+
+spring:
+  application:
+    name: myfirst-zuul
+  profiles:
+    active: ${deploy.type}
+
+logging:
+  config: classpath:logback-spring.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: myfirst-zuul
+    prefer-ip-address: true
+
+# 测试的访问地址：http://localhost:6001/zjj/mydept/dept/list
+zuul:
+  #ignored-services: myfirst-provider-dept
+  prefix: /zjj
+  ignored-services: "*"
+  routes:
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
