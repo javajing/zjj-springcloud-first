@@ -16,6 +16,7 @@
         <module>myfirst-common</module>
         <module>myfirst-provider-db1</module>
         <module>myfirst-provider-db2</module>
+        <module>myfirst-provider-db3</module>
     </modules>
 
     <properties>
@@ -78,11 +79,6 @@
                 <version>2.9.3</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <scope>test</scope>
-            </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
