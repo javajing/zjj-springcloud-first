@@ -15,6 +15,7 @@
         <module>myfirst-rest-api</module>
         <module>myfirst-common</module>
         <module>myfirst-provider-db1</module>
+        <module>myfirst-provider-db2</module>
     </modules>
 
     <properties>
