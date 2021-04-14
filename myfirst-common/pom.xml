@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>myfirst--common</artifactId>
+    <artifactId>myfirst-common</artifactId>
     <packaging>jar</packaging>
 
     <properties>

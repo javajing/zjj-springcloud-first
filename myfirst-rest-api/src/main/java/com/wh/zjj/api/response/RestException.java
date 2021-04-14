@@ -1,4 +1,4 @@
-package com.wh.zjj.common.dto;
+package com.wh.zjj.api.response;
 
 /**
  * @author zjj

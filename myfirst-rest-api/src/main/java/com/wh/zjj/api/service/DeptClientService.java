@@ -1,7 +1,7 @@
-package com.wh.zjj.common.service;
+package com.wh.zjj.api.service;
 
-import com.wh.zjj.common.dao.mapper.Dept;
-import com.wh.zjj.common.factory.DeptClientServiceFallbackFactory;
+import com.wh.zjj.api.dto.param.DeptParam;
+import com.wh.zjj.api.factory.DeptClientServiceFallbackFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +22,11 @@ public interface DeptClientService {
      * 采用Feign我们就可以使用SpringMVC的注解来对提供者的服务进行绑定！
      */
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
-    public Dept get(@PathVariable("id") long id);
+    public DeptParam get(@PathVariable("id") long id);
 
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
-    public List<Dept> list();
+    public List<DeptParam> list();
 
     @RequestMapping(value = "/dept/add", method = RequestMethod.POST)
-    public boolean add(Dept dept);
+    public boolean add(DeptParam dept);
 }

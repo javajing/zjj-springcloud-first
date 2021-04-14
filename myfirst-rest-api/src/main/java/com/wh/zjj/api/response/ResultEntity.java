@@ -1,8 +1,5 @@
-package com.wh.zjj.common.response;
+package com.wh.zjj.api.response;
 
-
-import com.wh.zjj.common.dto.RestException;
-import com.wh.zjj.common.dto.RestExceptionEnum;
 
 import java.io.Serializable;
 
