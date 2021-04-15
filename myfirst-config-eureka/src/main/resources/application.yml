@@ -1,0 +1,9 @@
+server: 
+  port: 7001
+
+spring:
+  application:
+    name: myfirst-config-eureka
+
+logging:
+  config: classpath:logback-spring.xml

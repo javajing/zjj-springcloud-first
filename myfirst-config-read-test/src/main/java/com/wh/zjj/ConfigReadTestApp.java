@@ -15,10 +15,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  */
 @SpringBootApplication
 @EnableConfigServer
-public class ConfigServerApp extends SpringBootServletInitializer {
+public class ConfigReadTestApp extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(ConfigServerApp.class);
+        SpringApplication application = new SpringApplication(ConfigReadTestApp.class);
         application.setBannerMode(Banner.Mode.OFF);
         application.run(args);
     }
@@ -28,7 +28,7 @@ public class ConfigServerApp extends SpringBootServletInitializer {
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(ConfigServerApp.class);
+        return builder.sources(ConfigReadTestApp.class);
     }
 
 }

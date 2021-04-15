@@ -24,6 +24,8 @@
         <module>myfirst-zuul</module>
         <module>myfirst-config-server</module>
         <module>myfirst-config-read-test</module>
+        <module>myfirst-config-provider</module>
+        <module>myfirst-config-eureka</module>
     </modules>
 
     <properties>
