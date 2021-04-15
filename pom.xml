@@ -22,6 +22,8 @@
         <module>myfirst-client-feign</module>
         <module>myfirst-hystrix-dashboard</module>
         <module>myfirst-zuul</module>
+        <module>myfirst-config-server</module>
+        <module>myfirst-config-read-test</module>
     </modules>
 
     <properties>

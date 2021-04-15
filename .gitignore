@@ -6,3 +6,16 @@
 rebel.xml
 /myfirst-eureka-node1/target/
 /myfirst-eureka-node2/target
+/myfirst-zuul/target
+/myfirst-client-feign/target
+/myfirst-config-read-test/target
+/myfirst-eureka-node3/target
+/myfirst-client-ribbon/target
+/myfirst-config-server/target
+/myfirst-hystrix-dashboard/target
+/myfirst-provider-db1/target
+/myfirst-provider-db2/target
+/myfirst-provider-db3/target
+/myfirst-provider-hystrix/target
+/myfirst-common/target
+/myfirst-rest-api/target

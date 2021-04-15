@@ -1,0 +1,19 @@
+server: 
+  port: 4001
+
+spring:
+  profiles:
+    active: ${deploy.type}
+  application:
+    name: myfirst-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/javajing/springcloud-first-config.git
+# 访问地址一：http://localhost:4001/test-config/dev
+# 访问地址二：http://localhost:4001/test-config-dev.properties
+# 我的GitHub仓库地址：https://github.com/javajing/springcloud-first-config/
+
+logging:
+  config: classpath:logback-spring.xml
