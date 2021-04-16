@@ -88,7 +88,7 @@ Eureka服务注册中心(集群)
 eureka服务启动后,可打开eureka的监控台,进行注册中心的集群查看以及服务注册信息的查看\
 地址: `http://eureka7001.com:7001/`
 
-
+![eureka](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/eureka.png)
 
 ## 2.2 服务提供方 ##
 
@@ -118,18 +118,21 @@ Eureka服务提供方(集群)
 - 启动myfirst-hystrix-dashboard项目，打开`http://localhost:9003/hystrix.stream`
 
 
-![](https://i.imgur.com/yoDFMHg.png)
+![hystrix1](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/hystrix1.png)
 
 我们可以监控：`myfirst-provider-hystrix`这个项目，于是在输入栏输入`http://localhost:8004/hystrix.stream`
 
-![](https://i.imgur.com/pBhQJkD.png)
+![hystrix2](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/hystrix2.png)
 
-随后，我们去测试接口：`http://localhost:8004/dept/get/2`
+点击monitor进入8004应用的监控页面
 
+![hystrix3](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/hystrix3.png)
 
-监控的数据就会变化了：
+随后，我们去测试接口：`http://localhost:8004/dept/get/2`, `http://localhost:8004/dept/get/12` 来触发正常请求和hystrix熔断请求并观察监控
 
-![](https://i.imgur.com/ITs9WPS.png)
+可以看到监控的数据就会变化了：
+
+![hystrix4](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/hystrix4.png)
 
 
 
