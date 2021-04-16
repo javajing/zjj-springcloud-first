@@ -1,20 +1,13 @@
 server: 
-  port: 8001
+  port: 9004
 
 spring:
-  application:
-    name: myfirst-provider-dept
   profiles:
     active: ${deploy.type}
-    include: common
-  datasource:
-    url: jdbc:mysql://localhost:3306/cloudDB01?characterEncoding=UTF-8&useSSL=false&connectTimeout=2000&socketTimeout=10000
-    username: root
-    password: root
+  application:
+    name: myfirst-actuator-admin
 
-logging:
-  config: classpath:logback-spring.xml
-
+#springboot-admin采用集成eureka的方式,来监控注册到eureka中的应用
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -22,10 +15,17 @@ eureka:
       # 将该service注册到集群eureka中
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: provider-db1   # 在eureka中显示对应的服务名字
+    instance-id: myfirst-actuator-admin   # 在eureka中显示对应的服务名字
     prefer-ip-address: true     #在eureka中下边的访问路径可以显示IP地址
 
-#admin监控权限取消
+#取消admin的权限校验
 management:
   security:
-    enabled: false  #取消springboot-admin的权限验证
+    enabled: false
+
+logging:
+  config: classpath:logback-spring.xml
+
+info:
+  version: @project.version@
+

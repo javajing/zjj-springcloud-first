@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false" scan="true" scanPeriod="1 seconds">
 
-    <property name="LOG_HOME" value="/web/logs/app/springcloud-first/provider-db1" />
+    <!-- 支持日志级别的动态调控 -->
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <jmxConfigurator/>
+
+    <property name="LOG_HOME" value="/web/logs/app/springcloud-first/myfirst-admin" />
 
     <contextName>logback</contextName>
     <substitutionProperty name="max.size" value="200MB" />

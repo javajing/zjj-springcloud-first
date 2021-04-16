@@ -26,6 +26,7 @@
         <module>myfirst-config-read-test</module>
         <module>myfirst-config-provider</module>
         <module>myfirst-config-eureka</module>
+        <module>myfirst-actuator-admin</module>
     </modules>
 
     <properties>
@@ -86,6 +87,22 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>2.9.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-server</artifactId>
+                <version>1.5.0</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-server-ui</artifactId>
+                <version>1.5.0</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>1.5.0</version>
             </dependency>
 
             <dependency>

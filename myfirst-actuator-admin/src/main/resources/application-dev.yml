@@ -1,0 +1,5 @@
+server:
+  tomcat:
+    uri-encoding: utf-8
+    max-connections: 100
+    min-spare-threads: 10
