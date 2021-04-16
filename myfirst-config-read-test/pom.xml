@@ -67,17 +67,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!-- springCloud Config -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-        <!-- 避免Config的Git插件报错：org/eclipse/jgit/api/TransportConfigCallback -->
-        <dependency>
-            <groupId>org.eclipse.jgit</groupId>
-            <artifactId>org.eclipse.jgit</artifactId>
-            <version>4.10.0.201712302008-r</version>
-        </dependency>
 
         <!-- 修改后立即生效，热部署 -->
         <dependency>

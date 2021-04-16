@@ -11,8 +11,13 @@ spring:
       server:
         git:
           uri: https://github.com/javajing/springcloud-first-config.git
+          search-paths: /
+      label: master
 # 访问地址一：http://localhost:4001/test-config/dev
 # 访问地址二：http://localhost:4001/test-config-dev.properties
+# 访问地址三：http://localhost:4001/springcloudfirst-config-readtest/dev
+# 访问地址四：http://localhost:4001/springcloudfirst-config-provider/dev
+# 访问地址五：http://localhost:4001/springcloudfirst-config-eureka/dev
 # 我的GitHub仓库地址：https://github.com/javajing/springcloud-first-config/
 
 logging:

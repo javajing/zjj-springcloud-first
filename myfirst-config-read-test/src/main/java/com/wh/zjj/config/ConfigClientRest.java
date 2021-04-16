@@ -12,21 +12,18 @@ public class ConfigClientRest {
     @Value("${spring.application.name}")
     private String applicationName;
 
-    @Value("${eureka.client.service-url.defaultZone}")
-    private String eurekaServers;
-
     @Value("${server.port}")
     private String port;
 
     /**
-     * 访问地址：http://localhost:8202/config
-     *  dev的端口是8201，test的端口是8203(配置文件不同，端口就不一样！)
+     * 访问地址：http://localhost:5001/config
+     *  dev的端口是5001，test的端口是5002(配置指定的profile不同，端口就不一样！)
      * @return
      */
     @RequestMapping("/config")
     public String getConfig() {
-        String str = "applicationName: " + applicationName + "\t eurekaServers:" + eurekaServers + "\t port: " + port;
+        String str = "applicationName: " + applicationName + "\t eurekaServers:" + 1 + "\t port: " + port;
         System.out.println("******str: " + str);
-        return "applicationName: " + applicationName + "\t eurekaServers:" + eurekaServers + "\t port: " + port;
+        return "applicationName: " + applicationName + "\t eurekaServers:" + 1 + "\t port: " + port;
     }
 }

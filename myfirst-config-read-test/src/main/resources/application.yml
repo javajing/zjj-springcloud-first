@@ -1,3 +1,5 @@
+#bootstrap.yml的优先级最高
 spring:
   application:
+    #虽然这里配置了name,但是会优先以配置中心同名的属性为主
     name: springcloudfirst-config-readtest

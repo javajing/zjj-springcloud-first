@@ -15,10 +15,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  */
 @EnableEurekaServer//EurekaServer服务器端启动类,接受其它微服务注册进来
 @SpringBootApplication
-public class EurekaAppNode1 extends SpringBootServletInitializer {
+public class ConfigEurekaApp extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(EurekaAppNode1.class);
+        SpringApplication application = new SpringApplication(ConfigEurekaApp.class);
         application.setBannerMode(Banner.Mode.OFF);
         application.run(args);
     }
@@ -28,7 +28,7 @@ public class EurekaAppNode1 extends SpringBootServletInitializer {
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(EurekaAppNode1.class);
+        return builder.sources(ConfigEurekaApp.class);
     }
 
 }

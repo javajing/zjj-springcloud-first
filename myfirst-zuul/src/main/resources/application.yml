@@ -24,5 +24,5 @@ zuul:
   prefix: /zjj
   ignored-services: "*"
   routes:
-    mydept.serviceId: microservicecloud-dept
+    mydept.serviceId: myfirst-provider-dept
     mydept.path: /mydept/**
