@@ -186,3 +186,27 @@ SpringCloud Config 客户端：
 
 从config读取配置, 将myfirst-config-eureka(5002)作为注册中心, 提供服务查询
 - myfirst-config-provider(5001)
+
+
+## 2.6 Cloud boot admin监控 ##
+
+对于复杂的cloud应用, 我们得监控组件要求粒度要到每一个接口的，hystrix dashboard显然不适合，
+也不是这个应用场景。
+
+现引入spring boot admin这个神器，可以注册到Eureka和spring cloud无缝整合
+
+- myfirst-actuator-admin(9004)
+
+将myfirst-provider-db1(8001)作为admin的监控客户端进行监测(注意需要取消权限验证)观察;
+
+访问监控主页面(http://localhost:9004)如下:
+
+![admin1](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/admin1.png)
+
+监控myfirst-provider-db1(8001)的内存,jvm等信息如下:
+
+![admin2](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/admin2.png)
+
+监控myfirst-provider-db1(8001)的线程栈信息如下:
+
+![admin3](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/admin3.png)
