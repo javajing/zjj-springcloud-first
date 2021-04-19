@@ -4,6 +4,8 @@ server:
 spring:
   profiles:
     active: ${deploy.type}
+  application:
+    name: myfirst-hystrix-dashboard
 
 logging:
   config: classpath:logback-spring.xml

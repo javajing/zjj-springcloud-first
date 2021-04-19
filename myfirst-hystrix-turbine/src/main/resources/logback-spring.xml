@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false" scan="true" scanPeriod="1 seconds">
     
-    <property name="LOG_HOME" value="/web/logs/app/springcloud-first/myfirst-hystrix-dashboard" />
+    <property name="LOG_HOME" value="/web/logs/app/springcloud-first/myfirst-turbine" />
 
     <contextName>logback</contextName>
     <substitutionProperty name="max.size" value="200MB" />
