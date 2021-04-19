@@ -214,7 +214,7 @@ SpringCloud Config 客户端：
 
 ## 2.6 Cloud Turbine集群服务监控 ##
 
-针对单个流(stream)监控的效率不高，尤其是有许多微服务时效率比较低下;
+hystrixDashboard针对单个流(stream)监控的效率不高，尤其是有许多微服务时效率比较低下;
 
 Turbine可以将所有单独的hystrix.stream(实现了Hystrix回退机制，并通过Actuator暴露了/hystrix.stream端点)
 聚合成一个turbine.stream，以便在Hystrix Dashboard上查看,它使用DiscoveryClient
