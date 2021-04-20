@@ -128,4 +128,11 @@ public class BeanUtils {
         });
         return res;
     }
+
+    public static <T> T trans(Class<T> t, Object s) throws IllegalAccessException, InstantiationException {
+        T dist = t.newInstance();
+        org.springframework.beans.BeanUtils.copyProperties(s, dist);
+        return dist;
+    }
+
 }

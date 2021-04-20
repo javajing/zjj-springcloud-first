@@ -8,7 +8,6 @@ package com.wh.zjj.common.utils;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.google.common.collect.Lists;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
 import java.util.function.Function;
@@ -65,7 +64,7 @@ public class ListUtils {
     }
 
     public static List<Long> strToList(String str) {
-        if (str == null || StringUtils.isBlank(str)) {
+        if (str == null || StrUtil.isBlank(str)) {
             return Lists.newArrayList();
         }
         return Arrays.asList(str.split(",")).stream().map(s -> Long.parseLong(s.trim())).collect(Collectors.toList());
