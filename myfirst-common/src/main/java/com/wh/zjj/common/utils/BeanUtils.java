@@ -10,12 +10,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * @Author weiqu
- * @Description
- * @Date 2019/11/6
- *
- */
 @Slf4j
 public class BeanUtils {
 

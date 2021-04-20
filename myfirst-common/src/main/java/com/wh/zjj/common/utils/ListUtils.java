@@ -13,15 +13,11 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-/**
- * @author duguojun
- */
 public class ListUtils {
 
 
     /**
      * 过滤缓存为null数据
-     *
      * @param list
      * @return
      */
