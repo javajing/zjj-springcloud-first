@@ -6,7 +6,7 @@
     <artifactId>springcloud-first</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <description>zjj的第一代spring cloud组件使用demo</description>
+    <description>zjj的第一代springcloud组件使用案例</description>
 
     <modules>
         <module>myfirst-eureka-node1</module>
