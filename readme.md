@@ -1,9 +1,10 @@
 # 前言 #
 
-springcloud第一代组件产品的最基本使用demo, 
-后续我将继续更新cloud二代(springcloud-second),
+springcloud第一代组件产品的集成使用案例;
+
+由于第一代cloud组件中部分组件停更(如eureka,hystrix,feign等), 后续我将继续更新springcloud最新版本组件以及alibaba集成的使用案例;
  
- cloud alibaba(springcloud-my-alibaba) 的使用demo,以及目前流行的组件组合(springcloud-manager)使用的微服务项目实战;
+在案例的基础之上我还将推出cloud微服务企业级项目的实战;
 
 # 一、准备工作 #
 
