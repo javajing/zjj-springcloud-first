@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config: 
+      name: springcloudfirst-config-readtest     #需要从github上读取的资源名称，注意没有yml后缀名
+      profile: dev   #对应配置中心的多环境的指定,这里指定为test则启动端口为5002
+      label: master 
+      uri: http://config-4002.com:4002      #SpringCloudConfig获取的服务地址
+
+  rabbitmq:
+    host: 39.98.190.54
+    port: 5672
+    username: guest
+    password: guest
+
+security:
+  basic:
+    enabled: false

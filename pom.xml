@@ -28,6 +28,8 @@
         <module>myfirst-config-eureka</module>
         <module>myfirst-actuator-admin</module>
         <module>myfirst-hystrix-turbine</module>
+        <module>myfirst-config-bus</module>
+        <module>myfirst-config-bus-client</module>
     </modules>
 
     <properties>

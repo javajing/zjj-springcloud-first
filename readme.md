@@ -21,6 +21,7 @@ hosts文件路径：`C:\Windows\System32\drivers\etc`;\
 127.0.0.1 config-4001.com
 127.0.0.1 eureka5001.com
 127.0.0.1 eureka5002.com
+127.0.0.1 config-4002.com
 ```
 
 ## 1.2 数据库 ##
@@ -222,3 +223,41 @@ Turbine可以将所有单独的hystrix.stream(实现了Hystrix回退机制，并
 接口找出生产/hystrix.stream的相关服务
 
 ![turbine](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/turbine.jpg)
+
+
+## 2.7 Cloud BUS消息总线 ##
+
+configServer+bus的动态配置通知刷新原理图:
+
+![bus](https://raw.githubusercontent.com/javajing/springcloud-first/master/readme/bus.png)
+
+流程解释:  
+
+①提交配置触发post请求给server端的/bus/refresh
+
+②server端接收到请求并发送给SpringCloud Bus总线
+
+③Sping Cloud Bus接收到消息并通知给其他连接的总线的客户端
+
+④其他客户端接收到通知，请求Server端获取最新配置
+
+⑤全部客户端获取到最新的配置
+
+SpringCloud Config Bus服务端(获取配置都从这里来拿)
+
+- myfirst-config-bus(4002)
+
+SpringCloud Config Bus 客户端：
+
+- myfirst-config-bus-client(5001)
+
+git上config配置进行修改推送后, 调用  
+http://config-4002.com:4002/bus/refresh  
+实现configServer进行统一的bus下发,实现bus cleint微服务配置的动态更新
+
+## 2.8 Cloud Stream消息流平台 ##
+
+
+## 2.9 Cloud Sleuth Zipkin ##
+
+放入zjj-springcloud-alibaba中进行案例分析
